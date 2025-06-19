@@ -41,3 +41,6 @@ async def start(msg: types.Message):
     else:
         await msg.reply("Вы уже зарегистрированы!")
     save_db()
+
+if __name__ == '__main__':
+    executor.start_polling(dp, skip_updates=True)
