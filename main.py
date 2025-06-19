@@ -2,8 +2,6 @@ import os
 import json
 import random
 from aiogram import Bot, Dispatcher, types, executor
-from aiogram.types import InputFile
-from aiogram.dispatcher.filters import Command
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
 
 API_TOKEN = os.getenv("BOT_TOKEN")
@@ -12,7 +10,7 @@ bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 dp.middleware.setup(LoggingMiddleware())
 
-# Загрузка базы данных
+# База
 try:
     with open('data.json', 'r') as f:
         db = json.load(f)
